@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "admin",
+    "password": "kaist1234",
+    "database": "kaist_intensive_camp",
+    "host": "kaist-intensive-camp.c6kbj8jms9ud.us-east-2.rds.amazonaws.com",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "admin",
+    "password": "kaist1234",
+    "database": "kaist_intensive_camp",
+    "host": "kaist-intensive-camp.c6kbj8jms9ud.us-east-2.rds.amazonaws.com",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "admin",
+    "password": "kaist1234",
+    "database": "kaist_intensive_camp",
+    "host": "kaist-intensive-camp.c6kbj8jms9ud.us-east-2.rds.amazonaws.com",
+    "dialect": "mysql"
+  }
+}
