@@ -28,7 +28,7 @@ app.get("/", async (req, res) => {
         include: Form,
         order: [['createdAt','DESC']]
     })
-    res.json({ message: "Welcome to our application.", user:  user});
+    res.json({ message: "Hello Mofos", user:  user});
 });
 
 app.get("/courses", async (req, res) => {
