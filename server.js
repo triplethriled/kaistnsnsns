@@ -35,3 +35,9 @@ app.get("/courses", async (req, res) => {
 //   const courses = await db.Course.findAll({})
 //   res.json({ message: "Welcome to our application.", courses:  courses});
 });
+
+app.post("/form/create", async(req,res) =>{
+
+
+  res.json({message: "wow", body: req.body})
+})
