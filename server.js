@@ -60,5 +60,5 @@ app.post("/form/create", async(req,res) =>{
     where: {id: formId}
   })
 
-  res.json({message: "wow", body: req.body, form: _form})
+  res.json({message: "wow", body: req.body, form: _form, originalForm : form})
 })
