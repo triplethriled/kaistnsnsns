@@ -20,6 +20,7 @@ const user = require('./models/user');
 const formquestion = require('./models/formquestion');
 const User = db.User;
 const Form = db.Form;
+const FormQuestion = db.FormQuestion;
 app.get("/", async (req, res) => {  
     // const form = await Form.create({
     //     userId: 4,
