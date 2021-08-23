@@ -17,6 +17,7 @@ app.listen(port, () => console.log(`Server up and running on port ${port}.`));
 
 const db = require("./models");
 const user = require('./models/user');
+const formquestion = require('./models/formquestion');
 const User = db.User;
 const Form = db.Form;
 app.get("/", async (req, res) => {  
@@ -38,6 +39,26 @@ app.get("/courses", async (req, res) => {
 
 app.post("/form/create", async(req,res) =>{
 
+  const {questions, title} = req.body.googleForm
 
-  res.json({message: "wow", body: req.body})
+  Form
+  Formquestion
+
+  const form = await Form.create({
+    title: title
+  })
+  const formId = form.id
+  questions.forEach((question,index) => {
+    await FormQuestion.create({
+      formId: formId,
+      questionType: "text",
+      title: question.title
+    })
+  });
+  const _form = await Form.findOne({
+    include: FormQuestion,
+    where: {id: formId}
+  })
+
+  res.json({message: "wow", body: req.body, form: })
 })
