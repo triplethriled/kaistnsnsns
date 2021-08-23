@@ -41,14 +41,13 @@ app.post("/form/create", async(req,res) =>{
 
   const {questions, title} = req.body.googleForm
 
-  Form
-  Formquestion
+  
 
   const form = await Form.create({
     title: title
   })
   const formId = form.id
-  questions.forEach((question,index) => {
+  questions.forEach(async (question,index) => {
     await FormQuestion.create({
       formId: formId,
       questionType: "text",
@@ -60,5 +59,5 @@ app.post("/form/create", async(req,res) =>{
     where: {id: formId}
   })
 
-  res.json({message: "wow", body: req.body, form: })
+  res.json({message: "wow", body: req.body, form: _form})
 })
