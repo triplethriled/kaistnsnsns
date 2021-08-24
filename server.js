@@ -3,7 +3,7 @@ const http = require('http');
 const express = require('express');
 const cors = require('cors');
 //const port = process.env.PORT || 8000;
-const port = 8000
+const port = 3001
 const app = express();
 
 app.use(express.json());
@@ -40,7 +40,8 @@ app.get("/courses", async (req, res) => {
 
 app.post("/form/create", async(req,res) =>{
 
-  const {questions, title} = req.body.googleForm
+  const {questions} = req.body.googleForm
+  const {title} = req.body;
 
   
 
